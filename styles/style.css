@@ -1,0 +1,137 @@
+body {
+    background: linear-gradient(132deg, #3a6186, #89253e);
+    background-size: 600% 600%;
+    -webkit-animation: Gradient 25s ease infinite;
+    -moz-animation: Gradient 25s ease infinite;
+    animation: Gradient 25s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
+    font-family: 'Yantramanav', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.invisible{
+    display: none !important;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+    font-size: 85px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+#loginPage, #registrationPage{
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    background-color: rgba(149, 192, 206, 0.178);
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 800px) {
+    #loginPage, #registrationPage{
+        width: 80%;
+    }
+}
+
+#loginPage form, #registrationPage form{
+    width: 80%;
+}
+
+#loginPage h2, #registrationPage h2{
+    text-align: center;
+    margin: 15px auto;
+}
+
+#loginSubmit.submit{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 10px;
+    border: none;
+    width: auto;
+    transition: 0.3s;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#loginSubmit:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+#loginPage input, #registrationPage input{
+    font-size: 15px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    background-color: white;
+}
+
+.loginToggle, .loginToggle:hover, .loginToggle:visited, .loginToggle:active{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 15px;
+}
+.loginToggle:hover{
+    color: white;
+    transition: 0.3s;
+}
+.loginToggle{
+    transition: 0.3s;
+}
+
+#loginErrorMsg{
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 12vw;
+    }
+
+    #loginPage h2, #registrationPage h2{
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #loginPage, #registrationPage{
+        font-size: 5vw;
+    }
+
+    #loginSubmit.submit{
+        font-size: 4.5vw;
+    }
+}
