@@ -20,7 +20,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Yantramanav&display=swap" rel="stylesheet">
     </head>
 
-  <body>
+  <body id="loginBody">
     <h1>RemindMe</h1>
     <?php if(isset($_SESSION['duplicateEmail']) || isset($_SESSION['duplicateUsername']) || isset($_SESSION['wrongPasswordConfirm']) || isset($_SESSION['registrationFailure'])) : ?>
       <section id="loginPage" class = "invisible">
@@ -29,8 +29,8 @@
     <?php endif; ?>
       <h2>Login</h2>
       <form action="loginCheck.php" method="post">
-          Username:<br><input type="text" placeholder="Enter username" name="username" required><br>
-          Password:<br><input type="password" placeholder="Enter password" name="password" required><br>
+          Username:<br><input type="text" placeholder="Enter username" name="username" required class="inputText"><br>
+          Password:<br><input type="password" placeholder="Enter password" name="password" required class="inputText"><br>
           <input type="submit" value="Log in" id="loginSubmit" class="submit">
       </form>
       <a href="#" class="loginToggle">Don't have an account? Register now.</a>
@@ -46,11 +46,11 @@
     <?php endif; ?>
       <h2>Register</h2>
       <form action="registerCheck.php" method="post">
-        E-mail:<br><input type="email" placeholder="Enter email" name="email" required><br>
-        Username:<br><input type="text" placeholder="Enter username" minlength="3" maxlength="30" name="username" required><br>
-        Password:<br><input type="password" placeholder="Enter password" minlength="6" maxlength="30" name="password" required><br>
-        Confirm password:<br><input type="password" placeholder="Re-enter password" minlength="6" maxlength="30" name="passwordConfirm" required><br>
-        <input type="submit" value="Register" id="loginSubmit" class="submit">
+        E-mail:<br><input type="email" placeholder="Enter email" name="email" required class="inputText"><br>
+        Username:<br><input type="text" placeholder="Enter username" minlength="3" maxlength="30" name="username" required class="inputText"><br>
+        Password:<br><input type="password" placeholder="Enter password" minlength="6" maxlength="30" name="password" required class="inputText"><br>
+        Confirm password:<br><input type="password" placeholder="Re-enter password" minlength="6" maxlength="30" name="passwordConfirm" required class="inputText"><br>
+        <input type="submit" value="Register" id="regSubmit" class="submit">
       </form>
         <a href="#" class="loginToggle">Already have an account? Log in now.</a>
         <?php if(isset($_SESSION['duplicateEmail'])) : ?>
