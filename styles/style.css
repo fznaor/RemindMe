@@ -1,4 +1,8 @@
-body {
+html{
+    min-height: 100%;
+}
+
+#loginBody {
     background: linear-gradient(132deg, #3a6186, #89253e);
     background-size: 600% 600%;
     -webkit-animation: Gradient 25s ease infinite;
@@ -14,6 +18,25 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#profileBody, #indexBody{
+    background: url('../images/background.jpg') no-repeat fixed;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    color: white;
+    font-family: 'Yantramanav', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#profileRight, #accountInfo{
+    width: 40%
+}
+
+#editPassword, #deleteAccount{
+    width: 100%;
 }
 
 @keyframes Gradient {
@@ -32,6 +55,10 @@ body {
     display: none !important;
 }
 
+.invisibleHidden{
+    visibility: hidden;
+}
+
 h1{
     font-family: 'Lobster', cursive;
     font-size: 85px;
@@ -39,6 +66,11 @@ h1{
     color: white;
     margin-bottom: 10px;
     margin-top: 0;
+}
+
+#pageTitleLink, #pageTitleLink:hover, #pageTitleLink:active, #pageTitleLink:visited{
+    text-decoration: none;
+    color: white;
 }
 
 #loginPage, #registrationPage{
@@ -68,7 +100,15 @@ h1{
     margin: 15px auto;
 }
 
-#loginSubmit.submit{
+#profileBody h2{
+    font-size: 28px;
+}
+
+#profileBody, #indexBody{
+    font-size: 18px;
+}
+
+#loginSubmit.submit, #regSubmit.submit, #updatePasswordSubmit, #deleteAccountSubmit{
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -82,14 +122,19 @@ h1{
     font-size: 18px;
 }
 
-#loginSubmit:hover{
+#updatePasswordSubmit, #deleteAccountSubmit{
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#loginSubmit:hover, #regSubmit:hover, #updatePasswordSubmit:hover, #deleteAccountSubmit:hover{
     cursor: pointer;
     background-color: black;
     color: white;
     transition: 0.3s;
 }
 
-#loginPage input, #registrationPage input{
+.inputText{
     font-size: 15px;
     margin-bottom: 30px;
     border-radius: 2px;
@@ -97,6 +142,11 @@ h1{
     padding: 8px;
     width: 100%;
     background-color: white;
+    box-sizing: border-box;
+}
+
+#loginSubmit, #regSubmit{
+    margin-bottom: 30px;
 }
 
 .loginToggle, .loginToggle:hover, .loginToggle:visited, .loginToggle:active{
@@ -131,7 +181,215 @@ h1{
         font-size: 5vw;
     }
 
-    #loginSubmit.submit{
+    #loginSubmit.submit, #regSubmit.submit{
         font-size: 4.5vw;
+    }
+}
+
+#profileMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#accountInfo, #editPassword, #deleteAccount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(13, 9, 49);
+    color: white;
+    box-shadow: 0 0 3px rgb(23, 168, 226);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#accountInfo, #profileRight{
+    margin: 30px 0;
+}
+
+#editPassword{
+    margin-bottom: 30px;
+}
+
+#deleteAccount form{
+    margin:auto;
+}
+
+#emailParagraph{
+    margin-bottom: 30px;
+}
+
+#pageTitleFooter{
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+footer{
+    background-color: black;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    flex-shrink: 0;
+}
+
+footer div{
+    position: relative;
+    width: 113px;
+}
+
+footer div p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+#content {
+    flex: 1 0 auto;
+}
+
+@media only screen and (max-width: 500px) {
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer div{
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    footer>p{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #profileMain{
+        flex-direction: column;
+    }
+    #profileRight, #accountInfo{
+        width: 80%
+    }
+    #accountInfo{
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #profileBody h2{
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #profileBody{
+        font-size: 4.5vw;
+    }
+
+    #updatePasswordSubmit, #deleteAccountSubmit, #profileBody input{
+        font-size: 4vw;
+    }
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+#arrowDown{
+    width: 20px;
+    height: 15px;
+}
+
+#headerUser{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#headerUser:hover{
+    cursor: pointer;
+}
+
+#menu{
+    position: absolute;
+    top: 65px;
+    right: 2.25%;
+    width: 150px;
+    color: black;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+    opacity: 0;
+}
+
+#menu.visible{
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#menuBody{
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    margin-top: -5px;
+}
+
+#triangle{
+    margin-bottom: -7px;
+    padding-left: 60%;
+}
+
+#menu a, #menu a:visited, #menu a:hover, #menu a:active{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 15px 0;
+}
+
+#menu a{
+    transition: 0.3s;
+}
+
+#menu a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+header>a, #pageTitle, #headerUser{
+    flex:1;
+}
+
+@media only screen and (max-width: 600px) {
+    #headerUsername{
+        display: none;
+    }
+
+    #userIcon{
+        margin: 0;
+    }
+
+    #arrowDown{
+        margin-left: 0;
+    }
+
+    header img{
+        width: 9vw;
+        height: 9vw;
     }
 }

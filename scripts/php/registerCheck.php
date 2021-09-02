@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    require_once("userTable.php");
+    require_once("db/userTable.php");
 
     $obj = new UserTable("User");
     //$obj->createUserTable();
