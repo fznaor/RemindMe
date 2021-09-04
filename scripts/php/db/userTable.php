@@ -106,7 +106,7 @@ class UserTable
 
     public function getUserByUsername($username){
         $sql = <<<EOSQL
-            SELECT username, email FROM $this->tableName WHERE username=:username;
+            SELECT user_id, username, email FROM $this->tableName WHERE username=:username;
         EOSQL;
 
         $query = $this->conn->prepare($sql);

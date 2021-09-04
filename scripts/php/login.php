@@ -7,17 +7,28 @@
 
 <!doctype html>
 
-<html lang="hr">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RemindMe</title>
+        <title>RemindMe - Login</title>
+        <meta name="Description" content="Manage your personal events."/>
         <link rel="stylesheet" href="../../styles/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Yantramanav&display=swap" rel="stylesheet">
+        <meta name="og:title" property="og:title" content="RemindMe">
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="The number one page for personal event management." />
+        <meta property="og:image:type" content="../../images/icon.png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400" />
+        <meta property="og:image:alt" content="RemindMe logo." />
+        <link rel="icon" 
+          type="image/png" 
+          href="../../images/icon.png">
     </head>
 
   <body id="loginBody">
