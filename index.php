@@ -10,7 +10,7 @@
   $_SESSION["filterDate"] = "Upcoming";
 
   require_once("scripts/php/db/userTable.php");
-  $userTable = new UserTable("User");
+  $userTable = new UserTable("user");
   $userData = $userTable->getUserByUsername($_COOKIE['activeUser']);
   $user = '';
   while ($row = $userData->fetch()){
@@ -18,7 +18,7 @@
   }
 
   require_once("scripts/php/db/eventTable.php");
-  $obj = new EventTable("Event");
+  $obj = new EventTable("event");
   $data = $obj->getAllUsersEvents($user);
 
   function getImageName($category){

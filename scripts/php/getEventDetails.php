@@ -2,7 +2,7 @@
     $id = $_REQUEST["id"];
 
     require_once("db/eventTable.php");
-    $obj = new EventTable("Event");
+    $obj = new EventTable("event");
     $data = $obj->getEventById($id);
 
     $response = '';

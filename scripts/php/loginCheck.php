@@ -3,7 +3,7 @@
     session_start();
     require_once("db/userTable.php");
 
-    $obj = new UserTable("User");
+    $obj = new UserTable("user");
     //$obj->createUserTable();
 
     function loginFailure(){

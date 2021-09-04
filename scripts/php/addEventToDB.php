@@ -2,7 +2,7 @@
     session_start();
     require_once("db/eventTable.php");
 
-    $obj = new EventTable("Event");
+    $obj = new EventTable("event");
     //$obj->createEventTable();
 
     function createEventFailure(){
@@ -47,7 +47,7 @@
     }
 
     require_once("db/userTable.php");
-    $userTable = new UserTable("User");
+    $userTable = new UserTable("user");
     $userData = $userTable->getUserByUsername($_COOKIE['activeUser']);
     $user = '';
     while ($row = $userData->fetch()){

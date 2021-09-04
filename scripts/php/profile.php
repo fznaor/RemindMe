@@ -6,7 +6,7 @@
   else{
     require_once("db/userTable.php");
 
-    $obj = new UserTable("User");
+    $obj = new UserTable("user");
     $user = $obj->getUserByUsername($_COOKIE['activeUser']);
   }
 ?>

@@ -2,7 +2,7 @@
     session_start();
     require_once("db/eventTable.php");
 
-    $obj = new EventTable("Event");
+    $obj = new EventTable("event");
 
     function updateEventFailure(){
         echo("An error occurred, please try again.");

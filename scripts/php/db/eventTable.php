@@ -37,7 +37,7 @@ class EventTable
             category     VARCHAR(20)          NOT NULL,
             location     VARCHAR(100)         NOT NULL,
             description  VARCHAR(1000),
-            FOREIGN KEY(user_id) REFERENCES User(user_id)
+            FOREIGN KEY(user_id) REFERENCES user(user_id)
         );
         EOSQL;
 
