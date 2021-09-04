@@ -657,10 +657,14 @@ textarea:focus, input:focus, select:focus{
 #events{
     width: 90%;
     margin: auto;
-    display: grid;
+    display: block;
     grid-template-columns: repeat( auto-fit, 400px );
     column-gap: 25px;
     justify-content: space-between;
+}
+
+#events.grid{
+    display: grid;
 }
 
 .eventCard{
@@ -1007,8 +1011,7 @@ tr.lastRow td{
     text-align: center;
     font-size: 30px;
     width: 100%;
-    position: absolute;
-    left: 0;
+    position: block;
 }
 
 @media only screen and (max-width: 600px) {

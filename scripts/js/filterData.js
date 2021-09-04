@@ -8,6 +8,12 @@ async function filterData(){
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+            if(this.responseText == "<p id='noEventsFoundMsg'>No events found!</p>"){
+                document.getElementById("events").classList.remove("grid");
+            }
+            else{
+                document.getElementById("events").classList.add("grid");
+            }
             document.getElementById("events").innerHTML = this.responseText;
             document.getElementById("events").classList.add("visible");
             var heightnow=$("#events").height();

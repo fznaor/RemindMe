@@ -9,7 +9,7 @@
   $_SESSION["filterDate"] = $_REQUEST["date"];
 
   require_once("db/userTable.php");
-  $userTable = new UserTable("user");
+  $userTable = new UserTable("User");
   $userData = $userTable->getUserByUsername($_COOKIE['activeUser']);
   $user = '';
   while ($row = $userData->fetch()){
@@ -17,7 +17,7 @@
   }
 
   require_once("db/eventTable.php");
-  $obj = new EventTable("event");
+  $obj = new EventTable("Event");
 
   if($category=="All" && $importance=="All"){
     $data = $obj->getAllUsersEvents($user);

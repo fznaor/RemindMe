@@ -2,13 +2,12 @@ let modal = document.querySelector("#modalWindow");
 let deletePrompt = document.querySelector("#deleteCheck");
 
 function openDetails(target){
-    console.log()
-    modal.style.display = "flex";
     const eventId = target.querySelector("#eventID").innerHTML;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.querySelector("#eventDetails").innerHTML = this.responseText;
+            modal.style.display = "flex";
         }
     }
     xmlhttp.open("GET", "scripts/php/getEventDetails.php?id=" + eventId, true);
@@ -43,6 +42,12 @@ function getEvents(){
   let xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
+        if(this.responseText == "<p id='noEventsFoundMsg'>No events found!</p>"){
+          document.getElementById("events").classList.remove("grid");
+      }
+      else{
+          document.getElementById("events").classList.add("grid");
+      }
           document.getElementById("events").innerHTML = this.responseText;
           document.getElementById("events").classList.add("visible");
           var heightnow=$("#events").height();
@@ -116,6 +121,12 @@ function setupUpdateSubmit(){
             if (this.readyState == 4 && this.status == 200) {
               document.getElementById("events").classList.remove("visible");
               await new Promise(resolve => setTimeout(resolve, 500));
+              if(this.responseText == "<p id='noEventsFoundMsg'>No events found!</p>"){
+                document.getElementById("events").classList.remove("grid");
+            }
+            else{
+                document.getElementById("events").classList.add("grid");
+            }
               document.getElementById("events").innerHTML = this.responseText;
               var heightnow=$("#events").height();
               var heightfull=$("#events").css({height:'auto'}).height();

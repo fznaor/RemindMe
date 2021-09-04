@@ -157,7 +157,7 @@
           </div>
         </div>
       </section>
-      <section id="events" class="visible">
+      <section id="events" class="visible grid">
         <?php while ($row = $data->fetch()) : ?>
           <div class="eventCard" onclick='openDetails(this)'>
             <div class="eventHeader <?= getPriorityClass($row['importance'])?>">

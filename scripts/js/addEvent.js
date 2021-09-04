@@ -59,6 +59,12 @@ async function processAdding(response){
             if(response == "The event was successfully added!"){
                 document.getElementById("events").classList.remove("visible");
                 await new Promise(resolve => setTimeout(resolve, 500));
+                if(this.responseText == "<p id='noEventsFoundMsg'>No events found!</p>"){
+                    document.getElementById("events").classList.remove("grid");
+                }
+                else{
+                    document.getElementById("events").classList.add("grid");
+                }
                 document.getElementById("events").innerHTML = this.responseText;
                 document.getElementById("events").classList.add("visible");
                 var heightnow=$("#events").height();
