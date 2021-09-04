@@ -1,0 +1,1029 @@
+html{
+    min-height: 100%;
+}
+
+#loginBody {
+    background: linear-gradient(132deg, #3a6186, #89253e);
+    background-size: 600% 600%;
+    -webkit-animation: Gradient 25s ease infinite;
+    -moz-animation: Gradient 25s ease infinite;
+    animation: Gradient 25s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
+    font-family: 'Yantramanav', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#profileBody, #indexBody{
+    background: url('../images/background.jpg') no-repeat fixed;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    color: white;
+    font-family: 'Yantramanav', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#profileRight, #accountInfo{
+    width: 40%
+}
+
+#editPassword, #deleteAccount{
+    width: 100%;
+}
+
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.invisible{
+    display: none !important;
+}
+
+.invisibleHidden{
+    visibility: hidden;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+    font-size: 85px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+#pageTitleLink, #pageTitleLink:hover, #pageTitleLink:active, #pageTitleLink:visited{
+    text-decoration: none;
+    color: white;
+}
+
+#loginPage, #registrationPage{
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    background-color: rgba(149, 192, 206, 0.178);
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 800px) {
+    #loginPage, #registrationPage{
+        width: 80%;
+    }
+}
+
+#loginPage form, #registrationPage form{
+    width: 80%;
+}
+
+#loginPage h2, #registrationPage h2{
+    text-align: center;
+    margin: 15px auto;
+}
+
+#profileBody h2, #indexBody h2{
+    font-size: 28px;
+}
+
+#profileBody, #indexBody{
+    font-size: 18px;
+}
+
+#loginSubmit.submit, #regSubmit.submit, #updatePasswordSubmit, #deleteAccountSubmit, #addEvent.submit{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 10px;
+    border: none;
+    width: auto;
+    transition: 0.3s;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#updatePasswordSubmit, #deleteAccountSubmit{
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#loginSubmit:hover, #regSubmit:hover, #updatePasswordSubmit:hover, #deleteAccountSubmit:hover, #addEvent.submit:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+.inputText{
+    font-size: 15px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+#loginSubmit, #regSubmit{
+    margin-bottom: 30px;
+}
+
+.loginToggle, .loginToggle:hover, .loginToggle:visited, .loginToggle:active{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 15px;
+}
+.loginToggle:hover{
+    color: white;
+    transition: 0.3s;
+}
+.loginToggle{
+    transition: 0.3s;
+}
+
+#loginErrorMsg{
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 12vw;
+    }
+
+    #loginPage h2, #registrationPage h2, #indexBody h2{
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #loginPage, #registrationPage{
+        font-size: 5vw;
+    }
+
+    #loginSubmit.submit, #regSubmit.submit{
+        font-size: 4.5vw;
+    }
+}
+
+#profileMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#accountInfo, #editPassword, #deleteAccount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(13, 9, 49);
+    color: white;
+    box-shadow: 0 0 3px rgb(23, 168, 226);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#accountInfo, #profileRight{
+    margin: 30px 0;
+}
+
+#editPassword{
+    margin-bottom: 30px;
+}
+
+#deleteAccount form{
+    margin:auto;
+}
+
+#emailParagraph{
+    margin-bottom: 30px;
+}
+
+#pageTitleFooter{
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+footer{
+    background-color: black;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    flex-shrink: 0;
+}
+
+footer div{
+    position: relative;
+    width: 113px;
+}
+
+footer div p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+#content {
+    flex: 1 0 auto;
+}
+
+@media only screen and (max-width: 500px) {
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer div{
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    footer>p{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #profileMain{
+        flex-direction: column;
+    }
+    #profileRight, #accountInfo{
+        width: 80%
+    }
+    #accountInfo{
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #profileBody h2{
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #profileBody{
+        font-size: 4.5vw;
+    }
+
+    #updatePasswordSubmit, #deleteAccountSubmit, #profileBody input{
+        font-size: 4vw;
+    }
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+#arrowDown{
+    width: 20px;
+    height: 15px;
+}
+
+#headerUser{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#headerUser:hover{
+    cursor: pointer;
+}
+
+#menu{
+    position: absolute;
+    top: 65px;
+    right: 2.25%;
+    width: 150px;
+    color: black;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+    opacity: 0;
+}
+
+#menu.visible{
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#menuBody{
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    margin-top: -5px;
+}
+
+#triangle{
+    margin-bottom: -7px;
+    padding-left: 60%;
+}
+
+#menu a, #menu a:visited, #menu a:hover, #menu a:active{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 15px 0;
+}
+
+#menu a{
+    transition: 0.3s;
+}
+
+#menu a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+header>a, #pageTitle, #headerUser{
+    flex:1;
+}
+
+@media only screen and (max-width: 600px) {
+    #headerUsername{
+        display: none;
+    }
+
+    #userIcon{
+        margin: 0;
+    }
+
+    #arrowDown{
+        margin-left: 0;
+    }
+
+    header img{
+        width: 9vw;
+        height: 9vw;
+    }
+
+    #addEventBtn{
+        font-size: 5vw;
+    }
+}
+
+#createDate{
+    font-family: 'Yantramanav', sans-serif;
+}
+
+#addEventBtn{
+    margin: 20px auto 0 auto;
+    display: block;
+    font-size: 30px;
+    font-family: 'Yantramanav', sans-serif;
+    padding: 10px;
+    background-color: #4682b4;
+    color: white;
+    box-shadow: none;
+    border: none;
+    transition: 0.3s;
+}
+
+#addEventBtn:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+    #addEventBtn{
+        font-size: 5vw;
+    }
+}
+
+#addEventPage.noHeight{
+    transition: max-height 1.5s, padding 1s, margin 1.5s;
+}
+
+#addEventPage.fullHeight{
+    transition: max-height 1.5s, padding 0s 0.1s, margin 1.5s;
+    margin: 50px auto 50px auto;
+}
+
+#addEventPage.noHeight{
+    padding: 0;
+    margin: 0 auto 50px auto;
+}
+
+.noHeight{
+    max-height: 0;
+    overflow: hidden;
+}
+
+.fullHeight{
+    height: auto;
+    overflow: hidden;
+    max-height: 700px;
+}
+
+#addEventPage{
+    background-color: rgb(13, 9, 49);
+    color: white;
+    box-shadow: 0 0 3px rgb(23, 168, 226);
+    padding: 10px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#addEventForm{
+    width:80%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addEventForm>div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+#addEventForm label{
+    margin-right: 10px;
+    width: 120px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-grow: 0;
+}
+
+#addEventForm input{
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#addEventForm select{
+    padding: 5px;
+    font-size: 18px;
+    width: 200px;
+}
+
+#addEventForm textarea, #editDescr{
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 18px;
+    font-family: 'Yantramanav', sans-serif;
+    resize: vertical;
+    max-height: 200px;
+}
+
+#addEventForm div:last-of-type{
+    margin-top: 10px;
+}
+
+#addEventPage h2{
+    text-align: center;
+}
+
+textarea:focus, input:focus, select:focus{
+    outline: none;
+}
+
+#addEvent.submit{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+    margin-top: 18px;
+    margin-bottom: 14px;
+}
+
+.closeCreateFormBtn{
+    width: 20px;
+    height: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    #addEventForm{
+        font-size: 4vw;
+        width: 92%;
+    }
+
+    #addEventForm input, #addEventForm select, #addEventForm textarea{
+        font-size: 3.8vw;
+        width: 60%;
+    }
+
+    .closeCreateFormBtn{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+#createEventHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#createEventHeader>h2{
+    flex: 1;
+}
+
+#createEventHeader>img{
+    flex-grow: 0;
+    margin-right: 20px;
+}
+
+#createEventHeader>img:hover{
+    cursor: pointer;
+}
+
+#snackbar {
+    visibility: hidden; 
+    min-width: 300px; 
+    margin-left: -150px; 
+    background-color: #333;
+    color: #fff; 
+    text-align: center; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    bottom: 30px; 
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.eventCategory, .eventTime, .eventLocation{
+    display: flex;
+    align-items: center;
+}
+
+.eventCategory img, .eventTime img, .eventLocation img{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+
+.eventHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 130px;  
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.eventHeader.high{
+    background: linear-gradient(0deg, rgba(255,255,255,0) 1%, rgba(219, 9, 9, 0.7) 80%);
+}
+
+.eventHeader.medium{
+    background: linear-gradient(0deg, rgba(255,255,255,0) 1%, rgba(219, 104, 9, 0.6) 80%);
+}
+
+.eventHeader.medium img{
+    width: 27px !important;
+    height: 27px !important;
+}
+
+.eventHeader.low>h2{
+    text-align: center;
+    width: 100%;
+}
+
+#events{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, 400px );
+    column-gap: 25px;
+    justify-content: space-between;
+}
+
+.eventCard{
+    width: 400px;
+    text-align: center;
+    background-color: rgb(13, 9, 49);
+    color: white;
+    box-shadow: 0 0 3px rgb(23, 168, 226);
+    padding: 0 0 20px 0;
+    transition: transform .3s;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 950px) {
+    .eventCard{
+        width: 40vw;
+    }
+
+    #events{
+        grid-template-columns: repeat( auto-fit, calc(40vw) );
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #events h2{
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #events h2{
+        font-size: 4.5vw;
+    }
+
+    #events{
+        font-size: 3.5vw;
+    }
+
+    .eventCard{
+        width: 300px;
+        margin-right: 0;
+    }
+
+    #events{
+        grid-template-columns: repeat( auto-fit, 300px );
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eventCategory img, .eventTime img, .eventLocation img{
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .eventHeader.high img{
+        width: 8vw !important;
+        height: 8vw !important;
+    }
+    
+    .eventHeader.medium img{
+        width: 5.9vw !important;
+        height: 5.9vw !important;
+    }
+}
+
+.eventCard:hover{
+    cursor: pointer;
+    transform: scale(1.1)
+}
+
+.eventTitle{
+    overflow: hidden;
+}
+
+#modalWindow{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+#deleteCheck{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: fixed; 
+    z-index: 2; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.close{
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#eventDetails{
+    width: 600px;
+    margin: auto;
+    background-color: rgb(13, 9, 49);
+    color: white;
+    box-shadow: 0 0 3px rgb(23, 168, 226);
+    padding: 10px;
+}
+
+#deleteCheckBody{
+    width: 400px;
+    margin: auto;
+    background-color: rgb(13, 9, 49);
+    color: white;
+    box-shadow: 0 0 3px rgb(23, 168, 226);
+    padding: 10px;
+}
+
+#eventDetails h2, #deleteCheckBody p{
+    text-align: center;
+    width: 100%;
+}
+
+table td{
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:300px;
+    width:100%;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:300px;
+    width:100%;
+}
+
+.mapouter iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#eventDetailButtons, #deleteCheckBtns{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#eventDetailButtons button, #deleteCheckBtns button, #eventDetailButtons input{
+    padding: 10px !important;
+    border: none;
+    width: auto !important;
+    transition: 0.3s;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    display: flex;
+}
+
+#eventDetailButtons button:hover, #deleteCheckBtns button:hover, #eventDetailButtons input:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 700px) {
+    #eventDetails{
+        width: 80%;
+        margin:auto;
+        font-size: 3.5vw;
+    }
+
+    #deleteCheckBody{
+        width:70%;
+        margin: auto;
+        font-size: 3.5vw;
+    }
+
+    .mapouter{
+        height: 40vw
+    }
+    
+    .gmap_canvas {
+        height: 40vw;
+    }
+
+    #eventDetailButtons button, #deleteCheckBtns button, #eventDetailButtons input{
+        font-size: 4vw;
+    }
+}
+
+.eventCard>*{
+    pointer-events: none;
+}
+
+#editForm{
+    width: 100%;
+}
+
+table{
+    width: 100%;
+    font-size: 18px;
+}
+
+#updateDate, #editDescr{
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 18px;
+}
+
+table td:first-child{
+    width: 20%;
+}
+
+table select{
+    width: 175px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+#editForm input, #editForm textArea{
+    width: 100%;
+    font-size: 18px;
+    padding: 5px;
+}
+
+#updateBtn{
+    margin-top: 0;
+}
+
+tr.lastRow td{
+    padding-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #updateDate, #editDescr, table select, #editForm input, #editForm textArea, table{
+        font-size: 3.8vw;
+    } 
+
+    #editForm input, #editForm textArea{
+        box-sizing: border-box;
+        width: 90%;
+    }
+
+    table select{
+        width: 70%;
+    }
+}
+
+#myEventsHeader{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#filterList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#filterList>div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+#filterList span{
+    padding-bottom: 15px;
+}
+
+#filterList select{
+    width: 75%;
+    display: block;
+    margin: auto;
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+#filters h3{
+    padding-top: 10px;
+}
+
+#filters{
+    width: 600px;
+    margin: auto;
+    background-color: rgb(13, 9, 49);
+    color: white;
+    box-shadow: 0 0 3px rgb(23, 168, 226);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+    #filters{
+        width: 90%;
+    }
+
+    #filterList span{
+        font-size: 3.8vw;
+    }
+
+    #filterList select{
+        font-size: 3vw;
+    }
+}
+
+#noEventsFoundMsg{
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #noEventsFoundMsg{
+        font-size: 4.5vw;
+    }
+}
+
+#events{
+    opacity: 0;
+    transition: opacity 0.5s;
+    padding: 2px;
+}
+
+#events.visible{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
